@@ -10,6 +10,7 @@
 
 | 文章 | 日期 | 标签 |
 |------|------|------|
+| [C++ Lambda 与 Netlink Socket 学习笔记](posts/cpp-lambda-netlink/) | 2026-06-25 | C++, Linux, 网络编程 |
 | [Claude Code 完全使用指南（VS Code 版）](posts/claude-code-guide/) | 2026-06-24 | AI, VS Code |
 
 ## 🎬 视频教程
@@ -23,7 +24,12 @@
 ```
 /
 ├── index.html                      ← 博客首页
+├── assets/
+│   ├── style-common.css            ← 公共样式
+│   └── components.js               ← 右侧栏等公共组件
 ├── posts/
+│   ├── cpp-lambda-netlink/
+│   │   └── index.html              ← C++ Lambda 与 Netlink
 │   └── claude-code-guide/
 │       └── index.html              ← Claude Code 指南
 └── README.md
