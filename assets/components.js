@@ -2,10 +2,10 @@
 function loadRightSidebar() {
   const el = document.getElementById('rightSidebar');
   if (!el) return;
-  // 计算到仓库根目录的相对路径
-  const depth = (location.pathname.match(/\//g) || []).length - 1;
-  const repoName = location.pathname.split('/')[1] || '';
-  const base = location.hostname.includes('github.io') ? '/' + repoName + '/' : '/';
+  // 用当前页面路径计算回到 posts/ 目录的相对路径
+  const path = location.pathname;
+  const inPost = path.includes('/posts/');
+  const toRoot = inPost ? '../../' : './';
   el.innerHTML = `
   <div class="profile-card">
     <div class="profile-avatar">👨‍💻</div>
@@ -23,8 +23,8 @@ function loadRightSidebar() {
   <div class="right-section">
     <div class="right-section-title"><i class="ri-time-line"></i> 最新文章</div>
     <ul>
-      <li><a href="${base}posts/cpp-lambda-netlink/">C++ Lambda 与 Netlink</a><span class="date">06-25</span></li>
-      <li><a href="${base}posts/claude-code-guide/">Claude Code 指南</a><span class="date">06-24</span></li>
+      <li><a href="${toRoot}posts/cpp-lambda-netlink/">C++ Lambda 与 Netlink</a><span class="date">06-25</span></li>
+      <li><a href="${toRoot}posts/claude-code-guide/">Claude Code 指南</a><span class="date">06-24</span></li>
     </ul>
   </div>
   <div class="right-section">
