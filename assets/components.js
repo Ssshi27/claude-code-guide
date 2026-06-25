@@ -1,12 +1,29 @@
+// ═══════ 计算站点根路径 ═══════
+function getSiteRoot() {
+  // GitHub Pages: https://ssshi27.github.io/claude-code-guide/posts/xxx/
+  // 本地: file:///D:/xxx/index.html
+  const loc = location;
+  if (loc.protocol === 'file:') {
+    // 本地文件，用相对路径
+    const depth = (loc.pathname.match(/\/posts\//)) ? '../../' : './';
+    return depth;
+  }
+  // GitHub Pages 或其他服务器
+  const pathParts = loc.pathname.split('/').filter(Boolean);
+  // 第一段是仓库名（github.io 的情况）
+  if (loc.hostname.includes('github.io') && pathParts.length > 0) {
+    return '/' + pathParts[0] + '/';
+  }
+  return '/';
+}
+
 // ═══════ Right Sidebar Component ═══════
 function loadRightSidebar() {
   const el = document.getElementById('rightSidebar');
   if (!el) return;
-  // 用当前页面路径计算回到 posts/ 目录的相对路径
-  const path = location.pathname;
-  const inPost = path.includes('/posts/');
-  const toRoot = inPost ? '../../' : './';
+  const root = getSiteRoot();
   el.innerHTML = `
+  <a href="${root}" class="right-home-btn"><i class="ri-home-4-line"></i> 返回主页</a>
   <div class="profile-card">
     <div class="profile-avatar">👨‍💻</div>
     <div class="profile-name">Ssshi27</div>
@@ -23,8 +40,8 @@ function loadRightSidebar() {
   <div class="right-section">
     <div class="right-section-title"><i class="ri-time-line"></i> 最新文章</div>
     <ul>
-      <li><a href="${toRoot}posts/cpp-lambda-netlink/">C++ Lambda 与 Netlink</a><span class="date">06-25</span></li>
-      <li><a href="${toRoot}posts/claude-code-guide/">Claude Code 指南</a><span class="date">06-24</span></li>
+      <li><a href="${root}posts/cpp-lambda-netlink/">C++ Lambda 与 Netlink</a><span class="date">06-25</span></li>
+      <li><a href="${root}posts/claude-code-guide/">Claude Code 指南</a><span class="date">06-24</span></li>
     </ul>
   </div>
   <div class="right-section">

@@ -95,3 +95,8 @@ footer a { color: var(--accent); }
 .home-btn { position: fixed; bottom: 30px; left: 30px; width: 46px; height: 46px; border-radius: 12px; background: var(--accent2); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3em; z-index: 100; text-decoration: none; box-shadow: 0 8px 24px rgba(52,211,153,.3); transition: all .3s; }
 .home-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(52,211,153,.4); color: #fff; }
 @media (max-width: 900px) { .home-btn { bottom: 20px; left: 20px; width: 40px; height: 40px; font-size: 1.1em; } }
+
+/* ═══ Right Sidebar Home Button ═══ */
+.right-home-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 10px; background: linear-gradient(135deg, #34d399, #059669); color: #fff; font-size: .88em; font-weight: 600; text-decoration: none; transition: all .3s; box-shadow: 0 4px 16px rgba(52,211,153,.25); }
+.right-home-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(52,211,153,.35); color: #fff; }
+.right-home-btn i { font-size: 1.2em; }
