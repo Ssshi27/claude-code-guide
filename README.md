@@ -29,6 +29,12 @@
 
 也可以直接打开 `index.html` 在本地浏览器中查看。
 
+## 🎬 视频教程
+
+感谢 B 站博主 **沉默的羔丸voov** 的精彩分享：
+
+👉 [Claude Code 视频教程](https://www.bilibili.com/video/BV1ia9UBPESQ/)
+
 ## 🎯 适合谁
 
 - 刚接触 Claude Code 的开发者
