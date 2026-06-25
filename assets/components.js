@@ -21,12 +21,12 @@ function loadRightSidebar() {
   if (!document.getElementById('home-btn-style')) {
     const style = document.createElement('style');
     style.id = 'home-btn-style';
-    style.textContent = `.right-home-btn{display:flex;align-items:center;gap:10px;padding:10px 14px;margin-bottom:18px;border-radius:8px;background:#f6f8fa;border:1px solid #e2e4e8;color:#555;font-size:.84em;font-weight:500;text-decoration:none;transition:all .2s}.right-home-btn:hover{background:#eef2ff;border-color:#818cf8;color:#4338ca}.right-home-btn i{font-size:1.2em;color:#818cf8}`;
+    style.textContent = `.right-home-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#f6f8fa;border:1px solid #e2e4e8;color:#6366f1;font-size:1.2em;text-decoration:none;transition:all .2s;margin:0 auto 16px}.right-home-btn:hover{background:#eef2ff;border-color:#818cf8;color:#4338ca;transform:translateY(-2px);box-shadow:0 4px 12px rgba(99,102,241,.15)}.right-section .tag-cloud span{font-size:.72em;padding:3px 9px;border-radius:12px;border:1px solid}`;
     document.head.appendChild(style);
   }
 
   el.innerHTML = `
-  <a href="${root}" class="right-home-btn"><i class="ri-home-4-line"></i> 返回主页</a>
+  <a href="${root}" class="right-home-btn" title="返回主页"><i class="ri-home-4-line"></i></a>
   <div class="profile-card">
     <div class="profile-avatar">👨‍💻</div>
     <div class="profile-name">Ssshi27</div>
