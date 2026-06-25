@@ -21,7 +21,7 @@ function loadRightSidebar() {
   if (!document.getElementById('home-btn-style')) {
     const style = document.createElement('style');
     style.id = 'home-btn-style';
-    style.textContent = `.right-home-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px;margin-bottom:20px;border-radius:10px;background:linear-gradient(135deg,#34d399,#059669);color:#fff;font-size:.88em;font-weight:600;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(52,211,153,.25)}.right-home-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(52,211,153,.35);color:#fff}.right-home-btn i{font-size:1.2em}`;
+    style.textContent = `.right-home-btn{display:flex;align-items:center;gap:10px;padding:10px 14px;margin-bottom:18px;border-radius:8px;background:#f6f8fa;border:1px solid #e2e4e8;color:#555;font-size:.84em;font-weight:500;text-decoration:none;transition:all .2s}.right-home-btn:hover{background:#eef2ff;border-color:#818cf8;color:#4338ca}.right-home-btn i{font-size:1.2em;color:#818cf8}`;
     document.head.appendChild(style);
   }
 
