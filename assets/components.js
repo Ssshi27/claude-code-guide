@@ -1,20 +1,14 @@
 // ═══════ 计算站点根路径 ═══════
 function getSiteRoot() {
-  // GitHub Pages: https://ssshi27.github.io/claude-code-guide/posts/xxx/
-  // 本地: file:///D:/xxx/index.html
-  const loc = location;
-  if (loc.protocol === 'file:') {
-    // 本地文件，用相对路径
-    const depth = (loc.pathname.match(/\/posts\//)) ? '../../' : './';
-    return depth;
+  const path = location.pathname;
+  // 找到 posts/ 在路径中的位置，从那里往上两层就是根
+  const postsIdx = path.lastIndexOf('/posts/');
+  if (postsIdx !== -1) {
+    // 当前在文章页：截取到 posts/ 之前作为根
+    return path.substring(0, postsIdx + 1);
   }
-  // GitHub Pages 或其他服务器
-  const pathParts = loc.pathname.split('/').filter(Boolean);
-  // 第一段是仓库名（github.io 的情况）
-  if (loc.hostname.includes('github.io') && pathParts.length > 0) {
-    return '/' + pathParts[0] + '/';
-  }
-  return '/';
+  // 当前就在根目录
+  return path.substring(0, path.lastIndexOf('/') + 1);
 }
 
 // ═══════ Right Sidebar Component ═══════
@@ -22,6 +16,15 @@ function loadRightSidebar() {
   const el = document.getElementById('rightSidebar');
   if (!el) return;
   const root = getSiteRoot();
+
+  // 注入按钮样式（确保任何页面都生效）
+  if (!document.getElementById('home-btn-style')) {
+    const style = document.createElement('style');
+    style.id = 'home-btn-style';
+    style.textContent = `.right-home-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px;margin-bottom:20px;border-radius:10px;background:linear-gradient(135deg,#34d399,#059669);color:#fff;font-size:.88em;font-weight:600;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(52,211,153,.25)}.right-home-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(52,211,153,.35);color:#fff}.right-home-btn i{font-size:1.2em}`;
+    document.head.appendChild(style);
+  }
+
   el.innerHTML = `
   <a href="${root}" class="right-home-btn"><i class="ri-home-4-line"></i> 返回主页</a>
   <div class="profile-card">
