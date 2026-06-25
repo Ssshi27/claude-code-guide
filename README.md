@@ -1,33 +1,16 @@
-# 🤖 Claude Code 完全使用指南（VS Code 版）
+# ✍️ Ssshi27's Blog
 
-一份面向新手的 Claude Code 中文使用指南，帮助你在 VS Code 中高效使用 AI 编程助手。
+个人博客，基于 GitHub Pages 搭建，记录学习笔记和技术分享。
 
-## 📖 内容概览
+## 🌐 在线访问
 
-本指南覆盖 Claude Code 的方方面面：
+👉 [https://ssshi27.github.io/claude-code-guide/](https://ssshi27.github.io/claude-code-guide/)
 
-1. **什么是 Claude Code** — 基本概念介绍
-2. **安装与配置** — VS Code 扩展安装、CC Switch 配置、首次登录
-3. **快速上手（5 分钟）** — 从零开始的实操教程
-4. **斜杠命令详解** — 所有 `/` 命令的完整参考
-5. **VS Code 扩展详解** — 核心功能、文件引用、差异视图等
-6. **记忆系统** — CLAUDE.md、自动记忆、规则目录
-7. **设置与配置** — 配置层级、环境变量、API 端点
-8. **权限系统** — 安全级别、权限模式、白名单/黑名单
-9. **键盘快捷键** — 常用快捷键速查
-10. **MCP 服务器** — 连接外部工具和数据源
-11. **Hooks 钩子系统** — 自动化触发脚本
-12. **Git 集成** — AI 辅助 Git 操作
-13. **Plan 计划模式** — 先规划再执行
-14. **子代理与工作流** — 并行任务与自定义代理
-15. **会话管理** — 多会话、历史记录
-16. **新手最佳实践** — 使用建议与技巧
+## 📝 文章列表
 
-## 🚀 在线阅读
-
-👉 [点击这里在线查看完整指南](https://ssshi27.github.io/claude-code-guide/)
-
-也可以直接打开 `index.html` 在本地浏览器中查看。
+| 文章 | 日期 | 标签 |
+|------|------|------|
+| [Claude Code 完全使用指南（VS Code 版）](posts/claude-code-guide/) | 2026-06-24 | AI, VS Code |
 
 ## 🎬 视频教程
 
@@ -35,15 +18,16 @@
 
 👉 [Claude Code 视频教程](https://www.bilibili.com/video/BV1ia9UBPESQ/)
 
-## 🎯 适合谁
+## 📁 项目结构
 
-- 刚接触 Claude Code 的开发者
-- 想系统了解 Claude Code 功能的用户
-- 需要一份中文参考手册的团队
-
-## 📅 版本
-
-v2026-06-24 · VS Code 专用 · 小白友好
+```
+/
+├── index.html                      ← 博客首页
+├── posts/
+│   └── claude-code-guide/
+│       └── index.html              ← Claude Code 指南
+└── README.md
+```
 
 ## 📝 License
 
