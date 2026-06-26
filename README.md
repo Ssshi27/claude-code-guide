@@ -4,7 +4,7 @@
 
 ## 🌐 在线访问
 
-👉 [https://ssshi27.github.io/claude-code-guide/](https://ssshi27.github.io/claude-code-guide/)
+👉 [https://ssshi27.github.io/blog/](https://ssshi27.github.io/blog/)
 
 ## 📝 文章列表
 
